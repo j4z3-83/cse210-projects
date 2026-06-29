@@ -1,0 +1,9 @@
+Version control allows for a team of people to work collaboratively on a project and for changes to that project be updated or older versions recovered as needed.
+
+A major benefit of using version control is that it allows for team to be spread globally and still all be able to work on the same project, this allows for the project to be made up for the best individuals, rather than just those in a geographic area.
+
+Git and Github are and example of version control. using Git repositories and Github hosting allows for anyone on the project to make changes to a file on their local computer and then sync those changes with he Git repository via committing and pushing. Team members are also able to pull any changes from the get repository their local machines, allowing every one on the team to have the most up to date files on a project.
+
+Git status, Git Commit, and Git Push are examples of commanded used in version control.
+
+Using version control through a system like Git and Github allows for a team tp be dispersed globally and still able to work collaboratively on the same project. by using these systems a team can be assembled of the best individuals for the project without having to worry about the geographic proximity of individuals. It also allows for the recovery of earlier versions of the project to be recovered at anytime, allowing for changes to be rolled back if needed with out having to rewrite the code from scratch, a system like Git and Github also show what changes were made by who and even why they were needed. This improves efficiency as you don't need to track down who made a change to ask them why it was made as all the information would be available.
