@@ -6,52 +6,52 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("Enter your grade percentage: ");
-        string Percentage = Console.ReadLine();
-        int PercentNum = int.Parse(Percentage);
-        string Letter;
-        string PlusMinus;
+        string percentage = Console.ReadLine();
+        int percentNum = int.Parse(percentage);
+        string letter;
+        string plusMinus;
         
-        if(PercentNum >= 90)
+        if(percentNum >= 90)
         {
-            Letter = "A";
+            letter = "A";
         }
-        else if (PercentNum >= 80)
+        else if (percentNum >= 80)
         {
-            Letter = "B";
+            letter = "B";
         }
-        else if (PercentNum >= 70)
+        else if (percentNum >= 70)
         {
-            Letter = "C";
+            letter = "C";
         }
-        else if (PercentNum >= 60)
+        else if (percentNum >= 60)
         {
-            Letter = "D"; 
+            letter = "D"; 
         }
         else
         {
-            Letter = "F";
+            letter = "F";
         }
 
-        if(PercentNum >=94 || PercentNum < 60)
+        if(percentNum >=94 || percentNum < 60)
         {
-            PlusMinus = "";
+            plusMinus = "";
         }
-        else if (PercentNum % 10 >= 7)
+        else if (percentNum % 10 >= 7)
         {
-            PlusMinus = "+";
+            plusMinus = "+";
         }
-        else if (PercentNum % 10 <= 3)
+        else if (percentNum % 10 <= 3)
         {
-            PlusMinus = "-";
+            plusMinus = "-";
         }
         else
         {
-            PlusMinus = "";
+            plusMinus = "";
         }
         
-        Console.WriteLine($"Your letter grade is: {Letter}{PlusMinus}");
+        Console.WriteLine($"Your letter grade is: {letter}{plusMinus}");
         
-        if (PercentNum >= 70)
+        if (percentNum >= 70)
         {
             Console.WriteLine("Congratulations on passing the class");
         }

@@ -4,45 +4,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        string PlayAgain = "yes";
-        while (PlayAgain == "yes")
+        string playAgain = "yes";
+        while (playAgain == "yes")
         {
             Random randomGenerator = new Random();
-            int Number = randomGenerator.Next(1, 100);
-            int Guess;
-            int GuessCount = 0;
-            string Attempts;
+            int number = randomGenerator.Next(1, 100);
+            int guess;
+            int guessCount = 0;
+            string attempts;
             do
             {
                 Console.Write("What is your guess? ");
-                string GuessNum = Console.ReadLine();
-                Guess = int.Parse(GuessNum);
-                GuessCount++;
-                if(Guess < Number)
+                string guessNum = Console.ReadLine();
+                guess = int.Parse(guessNum);
+                guessCount++;
+                if(guess < number)
                 {
                     Console.WriteLine("Higher");
                 }
-                else if (Guess > Number)
+                else if (guess > number)
                 {
                     Console.WriteLine("Lower");
                 }
                 else
                 {
-                    if (GuessCount == 1)
+                    if (guessCount == 1)
                     {
-                        Attempts = "Guess";
+                        attempts = "Guess";
                     }
                     else
                     {
-                        Attempts = "Guesses";
+                        attempts = "Guesses";
                     }
 
                     Console.WriteLine("You guessed it!");
-                    Console.WriteLine($"It took you {GuessCount} {Attempts}.");
+                    Console.WriteLine($"It took you {guessCount} {attempts}.");
                 }
-            } while (Guess != Number);
+            } while (guess != number);
             Console.Write("Would you like to play again? ");
-            PlayAgain = Console.ReadLine();
+            playAgain = Console.ReadLine();
         }
     }
 }
