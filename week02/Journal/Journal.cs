@@ -16,7 +16,7 @@ public class Journal
         Console.WriteLine(newEntry._entryText);
         
         
-        _entries.AddRange(newEntry);
+        _entries.Add(newEntry);
     }
 
     public void DisplayAll()
