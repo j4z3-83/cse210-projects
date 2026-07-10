@@ -9,9 +9,10 @@ public class Entry
     
 
     //member functions
-        public void Display()
+        public void Display(string date, string prompt, string response)
     {
-        Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
-        Console.WriteLine(_entryText);
+        Console.WriteLine("");
+        Console.WriteLine($"Date: {date} - Prompt: {prompt}");
+        Console.WriteLine(response);
     }
 }
