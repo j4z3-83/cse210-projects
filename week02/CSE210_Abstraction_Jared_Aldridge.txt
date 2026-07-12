@@ -1,0 +1,11 @@
+Abstraction is the process of simplifying a code block by removing all the the essential elements of the code.
+
+The benefit of using abstraction is that it makes your code more readable, and allows someone to focus more on what an object does than how it does it.
+
+A common application of abstraction is in the automotive industry. A vehicle interface would have a generalized base class and would contain a function like drive() to handle the engine mechanics, this allows developers to design different car models without having to recreate the underlying code for engine mechanics.
+
+else if(choice == "2")
+            {
+                aJournal.DisplayAll();
+            }
+all of the more complicated code of how to display all the journal entries his hidden behind this function that is simple to understand what it is going to do.
