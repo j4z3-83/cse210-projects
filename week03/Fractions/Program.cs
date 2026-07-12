@@ -14,10 +14,13 @@ class Program
 
         Console.WriteLine (f1.GetFractionString());
         Console.WriteLine (f1.GetDecimalValue());
+
         Console.WriteLine (f2.GetFractionString());
         Console.WriteLine (f2.GetDecimalValue());
+        
         Console.WriteLine (f3.GetFractionString());
         Console.WriteLine (f3.GetDecimalValue());
+        
         Console.WriteLine (f4.GetFractionString());
         Console.WriteLine (f4.GetDecimalValue());
     }
