@@ -11,7 +11,7 @@ public class Entry
     //member functions
         public void Display(string date, string prompt, string response)
     {
-        Console.WriteLine("");
+        Console.WriteLine(new string('-', 50));
         Console.WriteLine($"Date: {date} - Prompt: {prompt}");
         Console.WriteLine(response);
     }
