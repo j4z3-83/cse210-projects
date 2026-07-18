@@ -24,6 +24,15 @@ public class Reference
     //functions
     public string GetDisplayText()
     {
-        return $"{_book} {_chapter}: {_verse}-{_endVerse}";      
+        string newReference;
+        if(_endVerse == 0)
+        {
+            newReference = $"{_book} {_chapter}: {_verse}";
+        }
+        else
+        {
+            newReference = $"{_book} {_chapter}: {_verse}-{_endVerse}";     
+        }
+        return newReference;    
     }
 }

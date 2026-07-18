@@ -5,7 +5,7 @@ public class Word
     //member variables
     private string _text;
     private bool _isHidden = false;
-    private string hiddenWord;
+    private string _hiddenWord;
 
     // constructor
     public Word(string text)
@@ -18,7 +18,7 @@ public class Word
     public void Hide()
     {
         string newWord = _text;
-        hiddenWord = new string('_', newWord.Length);
+        _hiddenWord = new string('_', newWord.Length);
         _isHidden = true;
         IsHidden();
     }
@@ -36,11 +36,6 @@ public class Word
     public string GetDisplayText()
     {
         
-        return hiddenWord;
+        return _hiddenWord;
     }
-
-
-
-
-
 }
