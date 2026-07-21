@@ -1,0 +1,11 @@
+Encapsulation is the practice of writing your code so that a classes variables and most of its functions cannot be directly accessed by external code.
+by encapsulation your code you make it safer as external code cannot directly change any of the variables and potential break the logic. Also if you need to change a piece of code if it is encapsulated only the code that need to be changed has to be.
+ensuring at all variables are private and only accessed via getter and setters.
+    public Scripture(Reference reference, string newText)
+    {
+        _reference = reference;
+        _text = newText;
+The Reference class is encapsulated and variables are passed to the Scripture call as the _reference member variable within the Scripture class, allowing the Scripture class to call those values with out needed to access the directly.
+    ScriptureLibrary sl = new ScriptureLibrary();
+    (_book, _chapter, _verse, _endVerse, _text) = sl.GetScriptureReference();
+The ScriptureLibrary class is encapsulated so the program gets the information it needs by calling the "GetScriptureReference()" function and does not need to worry about how those values are specifically generated.
