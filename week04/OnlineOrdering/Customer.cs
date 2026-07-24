@@ -7,6 +7,15 @@ public class Customer
     //Functions/methods
 
     //getters and setters
+    public string GetCustomerName()
+    {
+        return _customerName;
+    }
+    public void SetCustomerName(string newName)
+    {
+        _customerName = newName;
+    }
+
     public Address GetCustomerAddress()
     {
         return _customerAddress;

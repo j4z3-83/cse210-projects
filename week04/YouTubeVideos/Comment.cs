@@ -10,9 +10,9 @@ public class Comment
         return _commenterName;
     }
 
-    public void SetCommenterName(string Name)
+    public void SetCommenterName(string name)
     {
-        _commenterName = Name;
+        _commenterName = name;
     }
 
     public string GetCommentText()
