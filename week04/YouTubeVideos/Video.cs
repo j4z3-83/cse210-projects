@@ -11,19 +11,6 @@ public class Video
     public List <Comment> _comments = new List<Comment>();
 
     //functions
-    public string GetTitle()
-    {
-        return _title;
-    }
-    public string GetAuthor()
-    {
-        return _author;
-    }
-    public int GetLengthInSeconds()
-    {
-        return _lengthInSeconds;
-    }
-
     public void SetTitle(string title)
     {
         _title = title;

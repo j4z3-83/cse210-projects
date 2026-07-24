@@ -4,7 +4,7 @@ public class Comment
     private string _commenterName;
     private string _commentText;
 
-    //functions
+    //functions/Methods
     public string GetCommenterName()
     {
         return _commenterName;
