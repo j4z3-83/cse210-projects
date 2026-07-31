@@ -1,3 +1,7 @@
+//clears the console frequently so only relevant information is shown
+//the program, on completion of an activity, asks the user if they want to do that activity again, they they select no then they are returned to the main screen 
+//lists are shuffled so that a random prompt is chosen and prevents a duplicate prompt from being selected
+
 using System;
 using System.ComponentModel.Design;
 using System.Net;
@@ -31,17 +35,11 @@ class Program
                     if (selection == 1)
                     {
                         BreathingActivity breathing = new BreathingActivity();
-                        Console.Clear();
-                        breathing.SetName("Breathing Activity");
-                        breathing.SetDescription("This activity will help you relax by guiding you through Box breathing.");
+                    
                         breathing.DisplayStartingMessage();
-                        
-                        Console.Clear();
-                        Console.WriteLine("Preparing activity");
-                        breathing.ShowSpinner(5);
-                        
+
                         breathing.Run();
-                        Console.Clear();
+
                         breathing.DisplayEndingMessage();
                         Console.WriteLine("Would you like to try another activity? y/n ");
                         string continueActivity = Console.ReadLine
@@ -55,17 +53,11 @@ class Program
                     else if (selection == 2)
                     {
                         ReflectingActivity reflecting = new ReflectingActivity();
-                        Console.Clear();
-                        reflecting.SetName("Reflecting Activity"); 
-                        reflecting.SetDescription("This activity will allow you to reflect on time in your past when you have show inner strength and resilience. This will help you to recognize the your power and how you can use it in all aspects of your life.");
+
                         reflecting.DisplayStartingMessage();
                         
-                        Console.Clear();
-                        Console.WriteLine("Preparing activity");
-                        reflecting.ShowSpinner(5);
-                        
                         reflecting.Run();
-                        Console.Clear();
+
                         reflecting.DisplayEndingMessage();
                         Console.WriteLine("Would you like to try another activity? y/n ");
                         string continueActivity = Console.ReadLine
@@ -79,17 +71,10 @@ class Program
                     else if (selection == 3)
                     {
                         ListingActivity listing = new ListingActivity();
-                        Console.Clear();
-                        listing.SetName("Listing Activity");
-                        listing.SetDescription("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
                         listing.DisplayStartingMessage();
                         
-                        Console.Clear();
-                        Console.WriteLine("Preparing activity");
-                        listing.ShowSpinner(5);
-
                         listing.Run();
-                        Console.Clear();
+
                         listing.DisplayEndingMessage();
                         Console.WriteLine("Would you like to try another activity? y/n ");
                         string continueActivity = Console.ReadLine();

@@ -29,6 +29,10 @@ public class ReflectingActivity : Activity
     //Constructor
     public ReflectingActivity()
     {
+        _name = "Reflecting Activity";
+        _description = "This activity will allow you to reflect on time in your past when you have show inner strength and resilience. This will help you to recognize the your power and how you can use it in all aspects of your life.";
+        Random.Shared.Shuffle(CollectionsMarshal.AsSpan(_prompts));
+        Random.Shared.Shuffle(CollectionsMarshal.AsSpan(_questions));
         
     }
 
@@ -36,8 +40,6 @@ public class ReflectingActivity : Activity
     public void Run()
     {
         string continueActivity = "y";
-        Random.Shared.Shuffle(CollectionsMarshal.AsSpan(_prompts));
-        Random.Shared.Shuffle(CollectionsMarshal.AsSpan(_questions));
 
         while(continueActivity != "n")
         {

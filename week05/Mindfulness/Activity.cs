@@ -24,6 +24,7 @@ public class Activity
     //Methods/Functions
     public void DisplayStartingMessage()
     {
+        Console.Clear();
         Console.WriteLine ($"This is the {_name}");
         Console.WriteLine ($"{_description}\n");
         if (_name == "Breathing Activity")
@@ -36,9 +37,14 @@ public class Activity
             Console.Write("How long in seconds would you like to spend on this activity? ");
             _duration = int.Parse(Console.ReadLine()); 
         }
+
+        Console.Clear();
+        Console.WriteLine("Preparing activity");
+        ShowSpinner(5);
     }
     public void DisplayEndingMessage()
     {
+        Console.Clear();
         Console.WriteLine($"You have successfully completed the {_name}");         
     }
 
