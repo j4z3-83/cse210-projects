@@ -1,0 +1,16 @@
+Inheritance is the principle of having classes that share multiple methods, having those methods put into a separate class that other classes can be derivatives of to gain access to the common methods.
+
+a main benefit of inheritance is that is make it easier to repair and update code and shared code will only need to be changed in one place rather then in multiple classes.
+
+public class Activity
+{
+    //Member variables
+    protected string _name;
+    protected string _description;
+}
+
+In this example Activity is a base class and the variables _name and _description will be available to any derived classes.
+
+public class BreathingActivity : Activity
+
+This example shows that the class BreathingActivity is derived from the base class Activity.
