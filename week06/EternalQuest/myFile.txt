@@ -1,2 +1,0 @@
-0, 1
-SimpleGoal, a goal, do a thing, 100, False

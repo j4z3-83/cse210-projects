@@ -5,6 +5,7 @@ public abstract class Goal
     private string _goalName;
     private string _goalDescription;
     private int _pointsTotal;
+  
 
     public Goal(string name, string description, int points)
     {
@@ -17,13 +18,14 @@ public abstract class Goal
 
     public abstract bool IsComplete();
 
-    public virtual string GetDetailsString()
-    {
-        String details = "test";
-        return details;
-    }
+    public abstract string GetDetailsString();
+
 
     public abstract string GetStringRepresentation();
+        public virtual int GetPointsTotal()
+    {
+        return _pointsTotal;
+    }
 
     public string GetGoalName()
     {
@@ -35,10 +37,7 @@ public abstract class Goal
         return _goalDescription;
     }
 
-    public int GetPointsTotal()
-    {
-        return _pointsTotal;
-    }
+
 
    
 }

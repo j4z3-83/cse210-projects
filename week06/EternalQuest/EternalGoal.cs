@@ -19,14 +19,14 @@ public class EternalGoal : Goal
         return status;
     }
 
+    public override string GetDetailsString()
+    {
+        string details = $"[-] {GetGoalName()} ({GetGoalDescription()})";
+        return details;
+    }
+
     public override string GetStringRepresentation()
     {
-        string stringRepresentation = "";
-        string name = GetGoalName();
-        string description = GetGoalDescription();
-        int points = GetPointsTotal();
-        stringRepresentation = $"{this.GetType().Name}, {name}, {description}, {points}"; 
-
-        return stringRepresentation;   
+        return $"{this.GetType().Name},{GetGoalName()},{GetGoalDescription()},{GetPointsTotal()}"; 
     }
 }

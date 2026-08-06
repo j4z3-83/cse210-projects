@@ -1,33 +1,50 @@
 public class SimpleGoal : Goal
 {
     private bool _isComplete;
-
     public SimpleGoal(string name, string description, int points) : base (name, description, points)
     {
         _isComplete = false;
     }
 
+    public SimpleGoal(string name, string description, int points, bool completed) : base (name, description, points)
+    {
+        _isComplete = completed;
+    }
+
+    public bool GetIsComplete()
+    {
+        return _isComplete;
+    }
+
     public override int RecordEvent()
     {
-        IsComplete();
+        _isComplete = IsComplete();
         return GetPointsTotal();
     }
 
     public override bool IsComplete()
     {
-        _isComplete = true;
-        return _isComplete;
+        return true;
     }
+
+    public override string GetDetailsString()
+    {
+        string details;
+        if (_isComplete != true)
+        {
+            details = $"[ ] {GetGoalName()} ({GetGoalDescription()})";
+        }
+        else
+        {
+            details = $"[X] {GetGoalName()} ({GetGoalDescription()})";
+        }
+        return details;
+    }
+    
 
     public override string GetStringRepresentation()
     {
-        string stringRepresentation = "";
-        string name = GetGoalName();
-        string description = GetGoalDescription();
-        int points = GetPointsTotal();
-        stringRepresentation = $"{this.GetType().Name}, {name}, {description}, {points}, {_isComplete}"; 
-      
-        return stringRepresentation;
+        return $"{this.GetType().Name},{GetGoalName()},{GetGoalDescription()},{GetPointsTotal()},{_isComplete}";
     }
 
 
