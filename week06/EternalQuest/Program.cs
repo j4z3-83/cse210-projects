@@ -1,9 +1,12 @@
 using System;
+using System.Net.Quic;
+using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        GoalManager gm = new GoalManager();
+        gm.Start();        
     }
 }
