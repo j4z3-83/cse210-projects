@@ -1,0 +1,47 @@
+Polymorphism is the coding principle where a line of code can behave differently depending on the situation.
+
+A benefit of polymorphism is that it allows you to use less code when you have classes that are related but need to perform slightly different tasks.
+
+using the keyword virtual in a base class method and then override in its child classes is an example polymorphism.
+
+
+The code below show a use of polymorphism, the keyword abstract tells you that the method "GetDetailsString()" is going to perform differently in the child classes.
+
+public abstract class Goal
+{
+    public abstract string GetDetailsString();
+}
+
+public class ChecklistGoal : Goal
+{
+        public override string GetDetailsString()
+    {
+        string details;
+        if (IsComplete() != true)
+        {
+            details = $"[ ] {GetGoalName()} ({GetGoalDescription()}) -- goal completed {_amountCompleted}/{_target}";
+        }
+        else
+        {
+            details = $"[X] {GetGoalName()} ({GetGoalDescription()}) -- goal completed {_amountCompleted}/{_target}";
+        }
+        return details;
+    }
+}
+
+public class SimpleGoal : Goal
+{
+        public override string GetDetailsString()
+    {
+        string details;
+        if (_isComplete != true)
+        {
+            details = $"[ ] {GetGoalName()} ({GetGoalDescription()})";
+        }
+        else
+        {
+            details = $"[X] {GetGoalName()} ({GetGoalDescription()})";
+        }
+        return details;
+    }
+}
